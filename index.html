@@ -70,26 +70,16 @@ transform:scale(.98);
 </style>
 
 <script>
-function resetButtons(){
-    document.querySelectorAll(".button").forEach(function(button){
-        button.classList.remove("flash");
-        button.blur();
-    });
-}
-
 function flashButton(e, btn){
     e.preventDefault();
 
     btn.classList.add("flash");
 
     setTimeout(function(){
-        window.location.href = btn.href;
+        window.open(btn.href, "_blank");
+        btn.classList.remove("flash");
     },150);
 }
-
-window.addEventListener("pageshow", function(){
-    resetButtons();
-});
 </script>
 
 </head>
@@ -98,10 +88,10 @@ window.addEventListener("pageshow", function(){
 
 <div class="container">
 
-<img src="repeatershield.jpg" class="logo" alt="RepeaterShield">
+<img src="repeatershield.jpg" class="logo">
 
 <a class="button"
-href="https://tinyurl.com/5dafcfcm"
+href="https://www.youtube.com/@repeatershield"
 onclick="flashButton(event,this)">
 Watch Demos - YouTube
 </a>
