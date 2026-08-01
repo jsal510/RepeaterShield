@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>RepeaterShield</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,63 +11,64 @@
 <link href="https://fonts.googleapis.com/css2?family=Exo:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-html,body{
-    background:#000;
-    color:#fff;
-    font-family:'Exo',sans-serif;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
+
 body{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:24px;
+background:#000;
+font-family:'Exo',sans-serif;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:20px;
 }
-main{
-    width:min(100%,760px);
+
+.container{
+width:100%;
+max-width:760px;
+text-align:center;
 }
-img{
-    width:100%;
-    display:block;
-    margin:0 auto 32px;
+
+.logo{
+width:100%;
+display:block;
+margin-bottom:32px;
 }
-.buttons{
-    max-width:470px;
-    margin:0 auto;
-}
+
 .button{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-decoration:none;
-    color:#fff;
-    border:3px solid #fff;
-    border-radius:18px;
-    height:74px;
-    margin-bottom:18px;
-    font-size:1.2rem;
-    font-weight:700;
-    background:#000;
-    transition:all .15s ease;
-    -webkit-tap-highlight-color:transparent;
+display:block;
+width:100%;
+max-width:470px;
+margin:18px auto;
+padding:22px;
+border:3px solid #fff;
+border-radius:18px;
+color:#fff;
+text-decoration:none;
+font-size:22px;
+font-weight:700;
+background:#000;
+transition:.15s;
 }
+
 .button:hover,
-.button:focus,
 .button:active{
-    background:#fff;
-    color:#000;
+background:#fff;
+color:#000;
 }
 </style>
+
 </head>
 
 <body>
 
-<main>
+<div class="container">
 
-<img src="repeatershield.jpg" alt="RepeaterShield">
-
-<div class="buttons">
+<img src="repeatershield.jpg" class="logo">
 
 <a class="button"
 href="https://www.youtube.com/@repeatershield"
@@ -81,8 +83,6 @@ Purchase on Abstract Ocean
 </a>
 
 </div>
-
-</main>
 
 </body>
 </html>
