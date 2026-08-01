@@ -53,15 +53,34 @@ text-decoration:none;
 font-size:14px;
 font-weight:700;
 background:#000;
-transition:.15s;
+transition:background-color .15s,color .15s,transform .08s;
+-webkit-tap-highlight-color:transparent;
 }
 
-.button:hover,
-.button:active{
+.button:hover{
 background:#fff;
 color:#000;
 }
+
+.button.flash{
+background:#fff;
+color:#000;
+transform:scale(.98);
+}
 </style>
+
+<script>
+function flashButton(e, btn){
+    e.preventDefault();
+
+    btn.classList.add("flash");
+
+    setTimeout(function(){
+        window.open(btn.href, "_blank");
+        btn.classList.remove("flash");
+    },150);
+}
+</script>
 
 </head>
 
@@ -73,13 +92,13 @@ color:#000;
 
 <a class="button"
 href="https://www.youtube.com/@repeatershield"
-target="_blank">
+onclick="flashButton(event,this)">
 Watch Demos - YouTube
 </a>
 
 <a class="button"
 href="https://www.abstractocean.com/products/repeatershield"
-target="_blank">
+onclick="flashButton(event,this)">
 Details/Purchase - Abstract Ocean
 </a>
 
