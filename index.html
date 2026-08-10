@@ -54,16 +54,11 @@ text-decoration:none;
 font-size:14px;
 font-weight:700;
 background:#000;
-transition:background-color .15s,color .15s,transform .08s;
+transition:background-color .12s,color .12s,transform .08s;
 -webkit-tap-highlight-color:transparent;
 }
 
-.button:hover{
-background:#fff;
-color:#000;
-}
-
-.button.flash{
+.button:active{
 background:#fff;
 color:#000;
 transform:scale(.98);
@@ -71,61 +66,32 @@ transform:scale(.98);
 
 </style>
 
-<script>
-
-function resetButtons(){
-document.querySelectorAll(".button").forEach(function(button){
-button.classList.remove("flash");
-button.blur();
-});
-}
-
-function flashButton(e,btn){
-
-e.preventDefault();
-
-btn.classList.add("flash");
-
-setTimeout(function(){
-window.location.href=btn.href;
-},150);
-
-}
-
-window.addEventListener("pageshow",function(){
-resetButtons();
-});
-
-</script>
-
 </head>
 
 <body>
 
 <div class="container">
 
-<img src="repeatershield.jpg"
+<img
+src="repeatershield.jpg"
 class="logo"
 alt="RepeaterShield">
 
 
 <a class="button"
-href="https://tinyurl.com/5dafcfcm"
-onclick="flashButton(event,this)">
-Watch Demos - YouTube
+href="https://www.youtube.com/@repeatershield">
+Product Demo - YouTube
 </a>
 
 
 <a class="button"
-href="https://www.abstractocean.com/products/repeatershield"
-onclick="flashButton(event,this)">
+href="https://www.abstractocean.com/products/repeatershield">
 Details/Purchase - Abstract Ocean
 </a>
 
 
 <a class="button"
-href="https://youtu.be/EpuBcGdbOFc?si=ykuTnMcpYyXQiY0X"
-onclick="flashButton(event,this)">
+href="https://youtu.be/EpuBcGdbOFc?si=ykuTnMcpYyXQiY0X">
 Official Installation Vid - YouTube
 </a>
 
